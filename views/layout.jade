@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Avgle-#{title}
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    - if (title != 'video-play')
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+    - if (title != 'video-play')
+      meta(name="referrer" content="none")
+    link(href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js")
+    script(src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js")
+  body
+    block content
+    include footer
+    

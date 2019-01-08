@@ -1,0 +1,21 @@
+nav.navbar.navbar-default.navbar-inverse.navbar-static-top(role='navigation')
+  // Brand and toggle get grouped for better mobile display
+  .navbar-header
+    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand(href='#') Avgle
+  // Collect the nav links, forms, and other content for toggling
+  .collapse.navbar-collapse.navbar-ex1-collapse
+    ul.nav.navbar-nav
+      li(class="#{ title == 'home' ? 'active' : '' }")
+        a(href='/') home
+      li(class="#{ title == 'video' ? 'active' : '' }")
+        a(href='/video') video
+    form.navbar-form.navbar-left(role='search', method="get", action="/video")
+      .form-group
+        input.form-control(type='text', placeholder='Search', name="search" value="#{req.query.search || ''}")
+      button.btn.btn-default(type='submit') 搜索
+    

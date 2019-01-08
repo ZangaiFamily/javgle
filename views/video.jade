@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  include navbar
+  
+  .container
+    div 视频集
+    .row.js-video
+  script var CHID = '#{req.query.CHID}'
+  script var search = '#{req.query.search}'
+  != js("video")

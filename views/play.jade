@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  include navbar
+  
+  .container
+    div.js-video-title
+    div.row.js-video
+  script var vid = '#{vid}'
+  != js("play")
