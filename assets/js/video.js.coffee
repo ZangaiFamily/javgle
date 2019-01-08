@@ -11,8 +11,8 @@ class Video extends Base
     @has_more = true
 
     # 针对移动端手势操作
-    # $(document).on 'touchstart', 'img.img-thumbnail', (event) => @preview(event)
-    # $(document).on 'touchend', 'img.img-thumbnail', (event) => @preview(event)
+    $(document).on 'touchstart', 'img.img-thumbnail', (event) => @preview(event)
+    $(document).on 'touchend', 'img.img-thumbnail', (event) => @preview(event)
 
     $(document).on 'mouseover', 'img.img-thumbnail', (event) => @preview(event)
     $(document).on 'mouseout', '.js-preview-video', (event) => @preview(event)
